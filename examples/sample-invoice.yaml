@@ -1,0 +1,32 @@
+from:
+  name: "Acme Corp"
+  address: |
+    123 Business Ave, Suite 400
+    San Francisco, CA 94102
+
+bill_to:
+  name: "Client LLC"
+  address: |
+    456 Client Street
+    New York, NY 10001
+
+items:
+  - description: "Web Development Services — March 2026"
+    quantity: 80
+    unit_price: 150.00
+  - description: "Cloud Hosting (Monthly)"
+    quantity: 1
+    unit_price: 299.99
+  - description: "SSL Certificate (Annual)"
+    quantity: 1
+    unit_price: 49.99
+
+due_days: 15
+
+notes: |
+  **Payment via wire transfer:**
+  - Bank: First National Bank
+  - Account: 1234567890
+  - Routing: 021000021
+
+  Thank you for your business!

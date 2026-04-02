@@ -1,0 +1,23 @@
+{
+  "name": "invoicer",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "bun build --compile src/index.ts --outfile bin/invoicer"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/react": "^19.2.14"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@react-pdf/renderer": "^4.3.2",
+    "marked": "^17.0.5",
+    "react": "^19.2.4",
+    "yaml": "^2.8.3",
+    "zod": "^4.3.6"
+  }
+}
