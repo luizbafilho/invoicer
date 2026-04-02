@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "@react-pdf/renderer";
+import { View, Text, Link, StyleSheet } from "@react-pdf/renderer";
 import { Lexer, type Token, type Tokens } from "marked";
 import { colors, fontSize } from "./styles/theme.ts";
 
@@ -15,6 +15,10 @@ const styles = StyleSheet.create({
   },
   italic: {
     fontStyle: "italic",
+  },
+  link: {
+    color: colors.accent,
+    textDecoration: "underline",
   },
   listItem: {
     flexDirection: "row",
@@ -63,7 +67,12 @@ function renderInlineTokens(tokens: Token[]): React.ReactNode[] {
       return <Text key={i}>{token.raw}</Text>;
     }
     if (token.type === "link") {
-      return <Text key={i}>{(token as Tokens.Link).text}</Text>;
+      const link = token as Tokens.Link;
+      return (
+        <Link key={i} src={link.href} style={styles.link}>
+          {link.text}
+        </Link>
+      );
     }
     return <Text key={i}>{token.raw}</Text>;
   });
